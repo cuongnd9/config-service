@@ -1,0 +1,16 @@
+{
+  "services": [
+    {
+      "name": "auth-service",
+      "url": "https://auth-service.cuongw.now.sh"
+    },
+    {
+      "name": "news-service",
+      "url": "https://news-service.cuongw.now.sh"
+    },
+    {
+      "name": "bill-service",
+      "url": "https://bill-service.cuongw.now.sh"
+    }
+  ]
+}
