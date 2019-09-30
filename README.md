@@ -5,7 +5,6 @@
 ## Quick start
 
 ```
-$ go build
+$ go run main.go
 $ ./config-service
-$ go get -u github.com/gorilla/mux
 ```
