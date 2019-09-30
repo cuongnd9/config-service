@@ -6,5 +6,4 @@
 
 ```
 $ go run main.go
-$ ./config-service
 ```

@@ -1,12 +1,7 @@
-FROM golang:alpine
+FROM golang:1.11.2
 
-COPY . /go/src/github.com/PetIsland/config-service
+WORKDIR /
+COPY . .
+RUN go get -d github.com/gorilla/mux
 
-WORKDIR /go/src/github.com/PetIsland/config-service
-
-RUN go get .
-RUN go build
-
-CMD ["/go/bin/config-service"]
-
-EXPOSE 8888
+CMD ["go","run","main.go"]

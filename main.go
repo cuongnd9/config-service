@@ -54,5 +54,6 @@ func main()  {
 
 	router.Use(mux.CORSMethodMiddleware(router))
 
+	log.Printf("Listening on 8888...\n")
 	log.Fatal(http.ListenAndServe(":8888", router))
 }
