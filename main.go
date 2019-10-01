@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"log"
 	"encoding/json"
+	"os"
 
 	"github.com/gorilla/mux"
 )
@@ -46,6 +47,12 @@ func ProdHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main()  {
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "8888"
+	}
+
 	router := mux.NewRouter().StrictSlash(true)
 	
 	router.HandleFunc("/", HomeHandler).Methods("GET")
@@ -54,6 +61,6 @@ func main()  {
 
 	router.Use(mux.CORSMethodMiddleware(router))
 
-	log.Printf("Listening on 8888...\n")
-	log.Fatal(http.ListenAndServe(":8888", router))
+	log.Printf("Listening on " + port)
+	log.Fatal(http.ListenAndServe(":" + port, router))
 }
