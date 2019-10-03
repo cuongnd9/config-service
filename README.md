@@ -5,6 +5,7 @@
 ## Quick start
 
 ```
+$ go get ./...
 $ go run main.go
 ```
 
