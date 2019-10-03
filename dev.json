@@ -2,15 +2,15 @@
   "services": [
     {
       "name": "auth-service",
-      "url": "https://dev-auth-service.cuongw.now.sh"
+      "url": "https://dev-auth-service.herokuapp.com"
     },
     {
       "name": "news-service",
-      "url": "https://dev-news-service.cuongw.now.sh"
+      "url": "https://dev-news-service.herokuapp.com"
     },
     {
       "name": "bill-service",
-      "url": "https://dev-bill-service.cuongw.now.sh"
+      "url": "https://dev-bill-service.herokuapp.com"
     }
   ]
 }
